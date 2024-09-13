@@ -15,12 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta name="robots" content="index, follow"/>
-            <meta property="og:Store for buying products" content="Buy Men's Running Shoes | Brand Name"/>
-            <meta property="twitter:Store for buying products" content="Buy Men's Running Shoes | Brand Name"/>
-            <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34="/>
-            <meta name="robots" content="noindex,nofollow"/>
-            <meta name="author" content="Mohamed Salah"/>
+      
       </head>
       <body>
         <NavBar/>
