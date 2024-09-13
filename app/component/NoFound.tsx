@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec22de1c62b0c1b294def209744749cbaec1ca8f
 interface props{
     title:string
 }

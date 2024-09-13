@@ -1,4 +1,3 @@
-"use client"
 import { Rating } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,7 +25,11 @@ export default function Card({data}:props) {
   return (
     <>
     {data.map((item:item,index:number)=>
+<<<<<<< HEAD
         <div key={index} className=' pt-3 min-h-[400px] text-center  rounded-lg transition2    relative group overflow-hidden '   >
+=======
+        <div   key={index} className=' pt-3 min-h-[400px] text-center  rounded-lg transition2    relative group overflow-hidden '   >
+>>>>>>> ec22de1c62b0c1b294def209744749cbaec1ca8f
         <Link href={`/${item.id}`} className=''>
 
             <Image width={200} height={200} loading="lazy" className='border border-black rounded-lg  h-[300px] w-full px-5 mx-auto ' src={item.images[0]} alt="product" />
