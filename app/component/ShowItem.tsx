@@ -2,9 +2,9 @@
 "use client"
 import Rating from '@mui/material/Rating';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
-import AOS from 'aos';
 
 
 
@@ -36,19 +36,11 @@ interface props {
 export default function ShowItem({product}:props) {
   const [quantity, setQuantity] = useState(1);
   const [selection, setSelection] = useState('decription');
-    console.log(product)
 
-    useEffect(()=>{
-      if(typeof window !== undefined){
-          AOS.init();
-          AOS.refresh()
-      }
-  },[])
-
-  
-
-
+  const nav=useRouter()
   return (
+    <div>
+      <button className='bg-black px-4 py-2 text-white rounded-lg hover:bg-slate-900 hover:scale-110 transition-all duration-300' onClick={()=>nav.push('/')}>Back</button>
     <div className='overflow-hidden flex justify-center flex-col md:flex-row items-center gap-10 p-3'>
     <div className=' text-center ' data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
         <Image width={400} height={400} src={product.thumbnail?product.thumbnail:"/R.png"} alt="product" className='h-[300px] min-w-[300px]  rounded-xl ' style={{boxShadow:"2px 2px 30px #ccc"}}  />
@@ -104,6 +96,8 @@ export default function ShowItem({product}:props) {
             </div>
           </div>
         </div>
+
+    </div>
     </div>
   )
 }

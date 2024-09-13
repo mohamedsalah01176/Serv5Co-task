@@ -2,8 +2,6 @@
 import { Rating } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-// import  { useEffect} from 'react'
-// import AOS from 'aos';
 import { FiEye } from "react-icons/fi";
 
 
@@ -25,13 +23,6 @@ interface props{
 
 export default function Card({data}:props) {
 
-    // useEffect(()=>{
-    //     if(typeof window !== undefined){
-    //         AOS.init();
-    //         AOS.refresh()
-    //     }
-        
-    //   },[])
   return (
     <>
     {data.map((item:item,index:number)=>
