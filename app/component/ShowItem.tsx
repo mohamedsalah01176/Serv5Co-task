@@ -42,7 +42,7 @@ export default function ShowItem({product}:props) {
     <div>
       <button className='bg-black px-4 py-2 text-white rounded-lg hover:bg-slate-900 hover:scale-110 transition-all duration-300' onClick={()=>nav.push('/')}>Back</button>
     <div className='overflow-hidden flex justify-center flex-col md:flex-row items-center gap-10 p-3'>
-    <div className=' text-center ' data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+    <div className=' text-center '>
         <Image width={400} height={400} src={product.thumbnail?product.thumbnail:"/R.png"} alt="product" className='h-[300px] min-w-[300px]  rounded-xl ' style={{boxShadow:"2px 2px 30px #ccc"}}  />
         <div className='flex items-center gap-2' data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
           {product.images?.map((item:string,index:number)=>
@@ -51,7 +51,7 @@ export default function ShowItem({product}:props) {
         </div>
 
     </div >
-    <div className='flex gap-3 flex-col lg:w-1/2' data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+    <div className='flex gap-3 flex-col lg:w-1/2' >
         <p className='text-sm text-gray-400'>{product.brand}</p>
         <h1 className='text-3xl font-bold '> {product.title}</h1>
         <div className='flex gap-3 justify-between items-center ' >
